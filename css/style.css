@@ -11,6 +11,9 @@ body {
 nav {
   background-color: white;
   padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 p {
@@ -51,7 +54,14 @@ input {
 main {
   background-color: white;
   padding: 32px 72px;
+
+  display: flex;            /* Turn into a flex container */
+  flex-wrap: wrap;          /* Allow cards to wrap to next row */
+  justify-content: center;  /* Center cards horizontally */
+  align-items: center;      /* Center cards vertically */
+  gap: 32px;                /* Add spacing between cards */
 }
+
 
 nav button {
   background-color: #ea4c89;
@@ -70,14 +80,23 @@ nav button {
 }
 
 .card-footer {
+  display: flex;
+  justify-content: space-between;  /* Push title and icons apart */
+  align-items: center;
+  width: 100%;                     /* Match card width */
   font-size: 14px;
+  margin-top: 8px;
 }
+
 
 .card-footer * {
   margin-top: 8px;
 }
 
 #subnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 32px 72px 0;
   background-color: white;
 }
@@ -87,6 +106,10 @@ nav button {
   padding: 10px 16px;
   border: 1px solid black;
   background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
 }
 
 #trending p {
@@ -94,4 +117,65 @@ nav button {
   color: black;
   border-radius: 50px;
   padding: 6px 15px;
+  font-weight: 500;
+}
+
+#destinations,
+#actions {
+  display: flex;
+  gap: 1rem; /* Creates space between children elements */
+  align-items: center; /* Vertically center links/buttons */
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 460px;
+  background-color: black;
+  text-align: center;
+  gap: 24px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  gap: 1rem; /* Space between elements */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 355px;        /* Matches .img-placeholder */
+}
+
+#trending {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 700px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.trending-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Space between tags */
 }
